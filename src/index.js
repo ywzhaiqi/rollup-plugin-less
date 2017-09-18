@@ -18,13 +18,18 @@ let fileCount = 0;
 
 export default function plugin (options = {}) {
     options.insert = options.insert || false;
+    options.styleClass = options.styleClass || 'inject';
     const filter = createFilter(options.include || [ '**/*.less', '**/*.css' ], options.exclude || 'node_modules/**');
 
     const injectFnName = '__$styleInject'
     return {
         name: 'less',
         intro() {
-            return options.insert ? insertStyle.toString().replace(/insertStyle/, injectFnName) : '';
+            return options.insert ? 
+                insertStyle.toString()
+                    .replace(/insertStyle/, injectFnName)
+                    .replace(/{class}/, options.styleClass) :
+                '';
         },
         async transform(code, id) {
             if (!filter(id)) {

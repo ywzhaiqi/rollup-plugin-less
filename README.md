@@ -1,3 +1,8 @@
+## 修改说明
+
+- 原版本用了 async 为了兼容低版本 node，需要 `babel-runtime/regenerator` 等，此修改版去掉了这些需求，但是 node > 7.6
+- 增加了新选项 `styleClass: 'inject'`
+
 ## Install
 
 ```node
@@ -32,6 +37,11 @@ rollup({
 + Type: `Boolean`
 
 If you specify `true`, the plugin will insert compiled CSS into `<head/>` tag.
+
+### styleClass
+
++ Default: `inject`
++ Type: `String`
 
 ### output
 
