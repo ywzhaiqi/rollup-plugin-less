@@ -5,8 +5,11 @@
 
 ## Install
 
-```node
-npm install rollup-plugin-less --save
+```bash
+npm install git+https://github.com/ywzhaiqi/rollup-plugin-less.git --save
+
+# 或
+yarn add git+https://github.com/ywzhaiqi/rollup-plugin-less.git
 ```
 
 ## usage
