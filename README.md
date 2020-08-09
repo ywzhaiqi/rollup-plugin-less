@@ -6,10 +6,10 @@
 ## Install
 
 ```bash
-npm install git+https://github.com/ywzhaiqi/rollup-plugin-less.git --save
+npm install @ywzhaiqi/rollup-plugin-less
 
 # 或
-yarn add git+https://github.com/ywzhaiqi/rollup-plugin-less.git
+yarn add @ywzhaiqi/rollup-plugin-less
 ```
 
 ## usage
